@@ -1,3 +1,5 @@
 allow vendor_init vendor_proc_display:file w_file_perms;
+allow vendor_init wlchgmonitor:process { siginh rlimitinh };
+allow vendor_init wlchgmonitor_exec:file { read getattr map execute open };
 
 set_prop(vendor_init, system_oplus_project_prop)
