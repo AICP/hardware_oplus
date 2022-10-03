@@ -59,6 +59,7 @@ public class KeyHandler implements DeviceKeyHandler {
     private final RotationController mRotationController;
     private final RingerController mRingerController;
     private final NotificationRingerController mNotificationRingerController;
+    private final RefreshController mRefreshController;
 
     private SliderControllerBase mSliderController;
 
@@ -102,6 +103,10 @@ public class KeyHandler implements DeviceKeyHandler {
                     mSliderController = mNotificationRingerController;
                     mSliderController.update(actions);
                     break;
+                case RefreshController.ID:
+                    mSliderController = mRefreshController;
+                    mSliderController.update(actions);
+                    break;
             }
 
             mSliderController.restoreState(context, false);
@@ -117,6 +122,7 @@ public class KeyHandler implements DeviceKeyHandler {
         mRotationController = new RotationController(mContext);
         mRingerController = new RingerController(mContext);
         mNotificationRingerController = new NotificationRingerController(mContext);
+        mRefreshController = new RefreshController(mContext);
 
         mContext.registerReceiver(mSliderUpdateReceiver,
                 new IntentFilter(Constants.ACTION_UPDATE_SLIDER_SETTINGS));
