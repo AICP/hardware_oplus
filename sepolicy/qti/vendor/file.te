@@ -6,6 +6,7 @@ type vendor_persist_camera_file, file_type;
 
 # Charging
 type vendor_proc_wireless, fs_type, proc_type;
+type sysfs_fastcharge, fs_type, sysfs_type;
 
 # Display
 type vendor_proc_display, fs_type, proc_type;
@@ -25,8 +26,8 @@ type vendor_sysfs_sensor_fb, fs_type, sysfs_type;
 # Versioning
 type vendor_proc_oplus_version, fs_type, proc_type;
 
+# Power Efficient Workqueue
+type sysfs_workqueue, fs_type, sysfs_type;
+
 # AICP
 type sysfs_info, fs_type, sysfs_type;
-
-# USB fast charge
-type sysfs_fastcharge, fs_type, sysfs_type;

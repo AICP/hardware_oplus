@@ -81,7 +81,6 @@
             android:summary="@string/usb2_fc_summary"
             android:title="@string/usb2_fc_title" />
     </PreferenceCategory>
-
     <PreferenceCategory
         android:key="vibrator"
         android:title="@string/category_vibrator">
@@ -96,5 +95,46 @@
             android:min="0"
             settings:units=""
             android:defaultValue="3" />
+    </PreferenceCategory>
+
+    <!-- Start of CPU Category -->
+    <PreferenceCategory
+        android:key="cpu"
+        android:title="@string/cpu_title">
+
+        <SwitchPreference
+            android:key="power_efficient_workqueue"
+            android:icon="@drawable/ic_cpu"
+            android:title="@string/power_efficient_workqueue_title"
+            android:summary="@string/power_efficient_workqueue_summary" />
+    </PreferenceCategory>
+
+    <!-- Start of UiBench Category -->
+    <PreferenceCategory
+        android:key="uibench"
+        android:title="@string/category_uibench">
+
+        <Preference
+            android:key="jitter"
+            android:icon="@drawable/ic_uibench_mode"
+            android:title="@string/jitter_test_title"
+            android:summary="@string/jitter_test_summary"
+            android:persistent="false" >
+            <intent android:action="android.intent.action.MAIN"
+                    android:targetPackage="com.aicp.oplus.OplusParts"
+                    android:targetClass="com.aicp.oplus.OplusParts.uibench.JitterTestActivity" />
+        </Preference>
+    </PreferenceCategory>
+
+    <!-- Start of misc settings category -->
+    <PreferenceCategory
+        android:key="misc"
+        android:title="@string/category_misc">
+
+        <SwitchPreference
+            android:key="quiet_mode"
+            android:icon="@drawable/ic_quiet_mode"
+            android:title="@string/quiet_mode_title"
+            android:summary="@string/quiet_mode_summary" />
     </PreferenceCategory>
 </PreferenceScreen>
