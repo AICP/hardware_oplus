@@ -50,6 +50,9 @@ public class OplusParts extends PreferenceFragment
     public static final String KEY_CATEGORY_MISC = "misc";
     public static final String KEY_QUIET_MODE_SWITCH = "quiet_mode";
 
+    public static final String KEY_GAME_SWITCH = "game_mode";
+    public static final String KEY_GAME_SWITCH_WARNING = "game_mode_warning";
+
     public static final String KEY_CATEGORY_UIBENCH = "uibench";
     public static final String KEY_JITTER = "jitter";
 
@@ -68,6 +71,7 @@ public class OplusParts extends PreferenceFragment
     private SwitchPreference mUSB2FastChargeModeSwitch;
 
     private CustomSeekBarPreference mVibratorStrengthPreference;
+    private static TwoStatePreference mGameModeSwitch;
     private static TwoStatePreference mQuietModeSwitch;
     private static TwoStatePreference mPowerEfficientWorkqueueModeSwitch;
 
@@ -114,6 +118,26 @@ public class OplusParts extends PreferenceFragment
         }
         else {
            findPreference(KEY_POWER_EFFICIENT_WQ_SWITCH).setVisible(false);
+        }
+
+        // TouchScreen Category
+        boolean touchscreenCategory = false;
+
+        // Game Mode
+        touchscreenCategory = touchscreenCategory | isFeatureSupported(context, R.bool.config_deviceSupportsGameMode);
+        if (isFeatureSupported(context, R.bool.config_deviceSupportsGameMode)) {
+            mGameModeSwitch = (TwoStatePreference) findPreference(KEY_GAME_SWITCH);
+            mGameModeSwitch.setEnabled(GameModeSwitch.isSupported(this.getContext()));
+            mGameModeSwitch.setChecked(GameModeSwitch.isCurrentlyEnabled(this.getContext()));
+            mGameModeSwitch.setOnPreferenceChangeListener(new GameModeSwitch());
+        }
+        else {
+           findPreference(KEY_GAME_SWITCH).setVisible(false);
+           findPreference(KEY_GAME_SWITCH_WARNING).setVisible(false);
+        }
+
+        if (!touchscreenCategory) {
+            getPreferenceScreen().removePreference((Preference) findPreference(KEY_CATEGORY_TOUCHSCREEN));
         }
 
         // Misc Settings

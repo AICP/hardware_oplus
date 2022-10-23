@@ -46,6 +46,10 @@ public class Startup extends BroadcastReceiver {
         if (enabled) {
             restore(QuietModeSwitch.getFile(context), enabled);
         }
+        enabled = sharedPrefs.getBoolean(OplusParts.KEY_GAME_SWITCH, false);
+        if (enabled) {
+            restore(GameModeSwitch.getFile(context), enabled);
+        }
     }
 
     private void restore(String file, boolean enabled) {

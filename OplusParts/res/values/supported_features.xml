@@ -24,6 +24,9 @@
     <!-- Whether device supports oem wireless charger Quiet Mode -->
     <bool name="config_deviceSupportsQuietMode">false</bool>
 
+    <!-- Whether device supports GameMode -->
+    <bool name="config_deviceSupportsGameMode">false</bool>
+
     <!-- Whether to show Jitter Test -->
     <bool name="config_deviceSupportsJitterTest">true</bool>
 </resources>

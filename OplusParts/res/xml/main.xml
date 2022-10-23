@@ -109,6 +109,25 @@
             android:summary="@string/power_efficient_workqueue_summary" />
     </PreferenceCategory>
 
+    <!-- Start of touchscreen Category -->
+    <PreferenceCategory
+        android:key="touchscreen"
+        android:title="@string/category_gamemode">
+
+        <SwitchPreference
+            android:key="game_mode"
+            android:icon="@drawable/ic_game_mode"
+            android:title="@string/game_mode_title"
+            android:summary="@string/game_mode_summary" />
+
+        <Preference
+            android:key="game_mode_warning"
+            android:icon="@drawable/ic_info_outline"
+            android:summary="@string/game_mode_warning"
+            android:persistent="false" />
+
+    </PreferenceCategory>
+
     <!-- Start of UiBench Category -->
     <PreferenceCategory
         android:key="uibench"
