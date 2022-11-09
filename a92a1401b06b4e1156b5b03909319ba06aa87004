@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c0228525_2b8b0071",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2022-11-09T21:24:47Z",
+      "side": 1,
+      "message": "PS2 \u003d PS7 on LoS Gerrit: https://review.lineageos.org/c/LineageOS/android_hardware_oplus/+/344000",
+      "revId": "a92a1401b06b4e1156b5b03909319ba06aa87004",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
