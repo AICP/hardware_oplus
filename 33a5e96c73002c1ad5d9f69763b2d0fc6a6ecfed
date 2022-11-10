@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0453ff43_32d0d879",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2022-11-10T17:39:44Z",
+      "side": 1,
+      "message": "PS4 is PS9 from LoS Gerrit.",
+      "revId": "33a5e96c73002c1ad5d9f69763b2d0fc6a6ecfed",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
