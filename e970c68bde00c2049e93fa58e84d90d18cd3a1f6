@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f0d5dd9e_7c5583b7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2022-11-13T20:11:29Z",
+      "side": 1,
+      "message": "PS7 is PS13 on LoS Gerrit.",
+      "revId": "e970c68bde00c2049e93fa58e84d90d18cd3a1f6",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
