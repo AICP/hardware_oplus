@@ -39,11 +39,15 @@ import java.util.Arrays;
 
 import com.aicp.oplus.OplusParts.Constants;
 import com.aicp.oplus.OplusParts.modeswitch.*;
+import com.aicp.oplus.OplusParts.preferences.*;
 import com.android.internal.util.aicp.FileUtils;
 
 public class OplusParts extends PreferenceFragment
         implements Preference.OnPreferenceChangeListener {
     private static final String TAG = OplusParts.class.getSimpleName();
+
+    public static final String KEY_CATEGORY_DISPLAY = "display";
+    public static final String KEY_KCAL = "kcal";
 
     private static final String KEY_USB2_SWITCH = "usb2_fast_charge";
     private static final String KEY_VIBSTRENGTH = "vib_strength";
@@ -84,6 +88,21 @@ public class OplusParts extends PreferenceFragment
 
         mVibrator = (Vibrator) getContext().getSystemService(Context.VIBRATOR_SERVICE);
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(getContext());
+
+        // Display
+        boolean displayCategory = false;
+
+        // Kcal
+        displayCategory = displayCategory | isFeatureSupported(context, R.bool.config_deviceSupportsKcal);
+        if (isFeatureSupported(context, R.bool.config_deviceSupportsKcal)) {
+        }
+        else {
+            findPreference(KEY_KCAL).setVisible(false);
+        }
+
+        if (!displayCategory) {
+            getPreferenceScreen().removePreference((Preference) findPreference(KEY_CATEGORY_DISPLAY));
+        }
 
         // USB category
         boolean usbCategory = false;
