@@ -36,6 +36,7 @@ import com.android.internal.lineage.hardware.LineageHardwareManager;
 import com.android.internal.lineage.hardware.TouchscreenGesture;
 
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
+import com.android.settingslib.widget.R;
 
 import com.android.touch.gestures.R;
 import com.android.touch.gestures.utils.ResourceUtils;
@@ -51,7 +52,7 @@ public class TouchscreenGestureSettings extends CollapsingToolbarBaseActivity
 
         if (savedInstanceState == null) {
             getFragmentManager().beginTransaction()
-                    .replace(com.android.settingslib.collapsingtoolbar.R.id.content_frame, getNewFragment())
+                    .replace(com.android.settingslib.widget.R.id.content_frame, getNewFragment())
                     .commit();
         }
     }
