@@ -1,3 +1,8 @@
+# AICP addition
+/sys/devices/platform/soc/soc:oplus,chg_intf/oplus_chg/usb/fastchg_status                                                 u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/soc:oplus,chg_intf/soc:oplus,chg_intf:oplus,wireless-charge/oplus_chg/wireless/fastchg_status   u:object_r:vendor_sysfs_battery_supply:s0
+
+
 # Alert Slider
 /vendor/bin/tri-state-key-calibrate    u:object_r:tri-state-key-calibrate_exec:s0
 
