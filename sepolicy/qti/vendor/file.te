@@ -30,10 +30,16 @@ type proc_bus_input, fs_type, proc_type;
 # Multimedia feedback
 type vendor_proc_mm_fb, fs_type, proc_type;
 
+# NVRAM
+type nvram_socket, file_type;
+
 # Performance
 type vendor_proc_oplus_ctp, fs_type, proc_type;
 type vendor_proc_oplus_scheduler, fs_type, proc_type;
 type vendor_sysfs_cb, fs_type, sysfs_type;
+
+# Pogo pin keyboard
+type vendor_proc_oplus_pogo_keyboard, fs_type, proc_type;
 
 # Reserve
 type oplus_reserve_connectivity_file, file_type;
