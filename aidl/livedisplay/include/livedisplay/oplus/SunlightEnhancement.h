@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include <aidl/vendor/lineage/livedisplay/BnSunlightEnhancement.h>
+#include <aidl/vendor/aicp/livedisplay/BnSunlightEnhancement.h>
 
 namespace aidl {
 namespace vendor {

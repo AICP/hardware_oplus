@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include <aidl/vendor/lineage/livedisplay/BnAdaptiveBacklight.h>
+#include <aidl/vendor/aicp/livedisplay/BnAdaptiveBacklight.h>
 
 namespace aidl {
 namespace vendor {

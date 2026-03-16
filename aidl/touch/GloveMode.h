@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include <aidl/vendor/lineage/touch/BnGloveMode.h>
+#include <aidl/vendor/aicp/touch/BnGloveMode.h>
 #include <aidl/vendor/oplus/hardware/touch/IOplusTouch.h>
 
 namespace aidl {

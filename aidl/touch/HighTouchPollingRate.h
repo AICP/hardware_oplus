@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include <aidl/vendor/lineage/touch/BnHighTouchPollingRate.h>
+#include <aidl/vendor/aicp/touch/BnHighTouchPollingRate.h>
 #include <aidl/vendor/oplus/hardware/touch/IOplusTouch.h>
 
 namespace aidl {

@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include <aidl/vendor/lineage/livedisplay/BnDisplayModes.h>
+#include <aidl/vendor/aicp/livedisplay/BnDisplayModes.h>
 #include <livedisplay/sdm/SDMController.h>
 #include <map>
 

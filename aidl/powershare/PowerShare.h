@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include <aidl/vendor/lineage/powershare/BnPowerShare.h>
+#include <aidl/vendor/aicp/powershare/BnPowerShare.h>
 
 namespace aidl {
 namespace vendor {

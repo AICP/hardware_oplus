@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include <aidl/vendor/lineage/livedisplay/BnAntiFlicker.h>
+#include <aidl/vendor/aicp/livedisplay/BnAntiFlicker.h>
 
 namespace aidl {
 namespace vendor {

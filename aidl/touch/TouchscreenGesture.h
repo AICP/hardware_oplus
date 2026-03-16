@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include <aidl/vendor/lineage/touch/BnTouchscreenGesture.h>
+#include <aidl/vendor/aicp/touch/BnTouchscreenGesture.h>
 #include <aidl/vendor/oplus/hardware/touch/IOplusTouch.h>
 #include <map>
 
